@@ -112,6 +112,7 @@ plan tests => 4;
 my $rt = RT::Client::REST->new(
     server => "http://localhost:$port",
     timeout => 2,
+    (logger => My::Logger->new) x !!$ENV{RELEASE_TESTING},
 );
 
 # avoid need ot login
@@ -133,3 +134,17 @@ $rt->basic_auth_cb(sub { return });
 kill 9, $pid;
 waitpid $pid, 0;
 exit;
+
+{
+    package My::Logger;
+    sub new { bless {} }
+    BEGIN {
+        for my $method (qw(debug info warn error)) {
+            no strict 'refs';
+            *$method = sub {
+                my $self = shift;
+                Test::More::diag("$method: ", @_);
+            };
+        }
+    }
+}
