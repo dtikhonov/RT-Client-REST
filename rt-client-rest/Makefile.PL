@@ -2,6 +2,8 @@ use inc::Module::Install 0.91;
 use strict;
 
 name 'RT-Client-REST';
+# Note to developers: let's keep this version number as low as we can,
+# so that RT::Client::REST can be used on older platforms, too.
 perl_version '5.006';
 all_from 'lib/RT/Client/REST.pm';
 license 'perl';
