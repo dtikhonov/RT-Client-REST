@@ -544,9 +544,9 @@ sub _submit {
     }
 
     # Then we send the request and parse the response.
-    $self->logger->debug("request: ", $req->as_string);
+    $self->logger->debug("request: ", $req->uri);
     my $res = $self->_ua->request($req);
-    $self->logger->debug("response: ", $res->as_string);
+    $self->logger->debug("response code: ", $res->code);
 
     if ($res->is_success) {
         # The content of the response we get from the RT server consists
