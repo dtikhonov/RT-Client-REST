@@ -1245,6 +1245,6 @@ project's co-maintainer. JLMARTIN has become co-maintainer as of March 2010.
 
 =head1 LICENSE
 
-Perl license.
+This module is released under the same terms as Perl itself.
 
 =cut

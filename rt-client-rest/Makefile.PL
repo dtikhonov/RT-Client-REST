@@ -6,7 +6,6 @@ name 'RT-Client-REST';
 # so that RT::Client::REST can be used on older platforms, too.
 perl_version '5.006';
 all_from 'lib/RT/Client/REST.pm';
-license 'perl';
 
 requires 'Encode'                => 0;
 requires 'Error'                 => 0;
