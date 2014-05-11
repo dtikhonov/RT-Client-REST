@@ -23,12 +23,13 @@ Author:
     RT::Client::REST is based on 'rt' command-line utility distributed
         with RT 3.x written by Abhijit Menon-Sen <ams@wiw.org> and
         donated to RT project.
-    In addition, since 2006, the following people have contributed code
-    and various patches:
+    In addition, since 2006, the following people have contributed code,
+    patches, and ideas:
     Stuart Browne       patches
     Tomas Doran         co-maintainer
     Darren Duncan       patches
     Gregor Hermann      patches
+    Stefan Hornburg     co-maintainer
     Damien Krotkine     co-maintainer
     Dave Lambley        patches
     Jose Luis Martinez  co-maintainer
