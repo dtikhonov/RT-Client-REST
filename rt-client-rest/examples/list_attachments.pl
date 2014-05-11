@@ -1,6 +1,6 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 #
-# show_ticket.pl -- retrieve an RT ticket.
+# list_attachments.pl -- list attachments of a ticket
 
 use strict;
 use warnings;
@@ -9,6 +9,18 @@ use Error qw(:try);
 use RT::Client::REST;
 use RT::Client::REST::Attachment;
 use RT::Client::REST::Ticket;
+use Log::Log4perl qw(:easy);
+
+my $log_conf =<<LOG_CONF;
+log4perl.category.Foo.Bar        = DEBUG, Screen
+
+log4perl.appender.Screen         = Log::Log4perl::Appender::Screen
+log4perl.appender.Screen.stderr  = 1
+log4perl.appender.Screen.layout  = PatternLayout
+log4perl.appender.Screen.layout.ConversionPattern=[%r] %F %L %c - %m%n
+LOG_CONF
+
+Log::Log4perl->easy_init($DEBUG);
 
 unless (@ARGV >= 3) {
     die "Usage: $0 username password ticket_id\n";
@@ -16,6 +28,7 @@ unless (@ARGV >= 3) {
 
 my $rt = RT::Client::REST->new(
     server  => ($ENV{RTSERVER} || 'http://rt.cpan.org'),
+#    logger  => Log::Log4perl->get_logger,
 );
 $rt->login(
     username=> shift(@ARGV),
