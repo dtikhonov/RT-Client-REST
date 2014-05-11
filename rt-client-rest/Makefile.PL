@@ -2,6 +2,7 @@ use inc::Module::Install 0.91;
 use strict;
 
 name 'RT-Client-REST';
+perl_version '5.006';
 all_from 'lib/RT/Client/REST.pm';
 license 'perl';
 
