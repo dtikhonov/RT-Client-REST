@@ -7,7 +7,6 @@ name 'RT-Client-REST';
 perl_version '5.006';
 all_from 'lib/RT/Client/REST.pm';
 
-requires 'Encode'                => 0;
 requires 'Error'                 => 0;
 requires 'Exception::Class'      => 0;
 requires 'HTTP::Cookies'         => 0;
@@ -20,6 +19,7 @@ requires 'URI'                   => 0;
 
 test_requires 'Test::More';
 test_requires 'Test::Exception'       => 0;
+test_requires 'Encode'                => 0;
 
 # HTTP::Server::Simple is required for t/83-attachment.t.  We include it
 # into the distribution.
