@@ -23,6 +23,30 @@ Author:
     RT::Client::REST is based on 'rt' command-line utility distributed
         with RT 3.x written by Abhijit Menon-Sen <ams@wiw.org> and
         donated to RT project.
+    In addition, since 2006, the following people have contributed code
+    and various patches:
+    Stuart Browne       patches
+    Tomas Doran         co-maintainer
+    Darren Duncan       patches
+    Gregor Hermann      patches
+    Damien Krotkine     co-maintainer
+    Dave Lambley        patches
+    Jose Luis Martinez  co-maintainer
+    Richard G McMahon   patches
+    Jerrad Pierce       co-maintainer
+    Roman Plessl        patches
+    Ryan Niebur         patches
+    T. Pascal           patches
+    Marco Pessotto      co-maintainer
+    Jerrad Pierce       co-maintainer
+    Miquel Ruiz         co-maintainer
+
+    (If you think you should be on this list, the omission is not
+    intentional and we apologize.  Please send email to one of co-maintaners
+    and we will take care of it).
+
+    You see that the number of co-maintainers is large.  This is because
+    co-maintainership is given out freely; ask.
 
 License:
     This module is licensed under the same terms as perl itself.
