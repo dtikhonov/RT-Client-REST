@@ -891,7 +891,6 @@ by Abhijit Menon-Sen, and converted it to an object-oriented Perl module.
 This API mimics that of 'rt'.  For a more OO-style APIs, please use
 L<RT::Client::REST::Object>-derived classes:
 L<RT::Client::REST::Ticket> and L<RT::Client::REST::User>.
-not implemented yet).
 
 =head1 METHODS
 
